@@ -1,5 +1,5 @@
-~/.config<br>
-  hypr<br>
+```~/.config
+  hypr
     hyprland.conf
     hyprlock.conf
   waybar
@@ -11,3 +11,4 @@
 ~/.scripts
   change-theme.sh
   powermenu.sh
+```
