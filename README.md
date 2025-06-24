@@ -1,5 +1,5 @@
-~/.config
-  hypr
+~/.config<br>
+  hypr<br>
     hyprland.conf
     hyprlock.conf
   waybar
