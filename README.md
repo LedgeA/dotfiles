@@ -1,4 +1,5 @@
-```~/.config
+```
+~/.config
   hypr
     hyprland.conf
     hyprlock.conf
