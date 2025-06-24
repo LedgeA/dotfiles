@@ -1,0 +1,94 @@
+{
+	"layer": "top",
+	"modules-left": ["cpu","memory","disk","tray"],
+	"modules-center": ["clock"],
+	"modules-right": ["network","bluetooth","pulseaudio","battery","custom/power"],
+	
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-muted": "muted",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "bluetooth": {
+        "format-on": "\udb80\udcb0 {status}",
+        "format-off": "\udb80\udcb2 {status}",
+        "format-connected": "\udb80\udcb1 {device_alias}",
+        "on-click": "bluetoothctl power on",
+        "on-click-right": "bluetoothctl power off"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "disk": {
+        "interval": 30,
+        "format": "  {percentage_used}%",
+        "path": "/"
+    },
+    "network": {
+        "interface": "wlo1", 
+        "format": "{icon}  {essid}",
+        "format-disconnected": "\udb82\udd2b disconnected",
+        "format-disabled": "\udb82\udd2c off",
+        "interval": 5,
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"] 
+    },
+    "privacy": {
+        "icon-spacing": 10,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "tooltip": false,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    },
+    "cpu": {
+        "interval": 15,
+        "format": "  {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": "  {}%",
+        "max-length": 10
+    },
+        "custom/power": {
+        "format": "⏻",
+        "tooltip": "Power Menu",
+        "on-click": "~/.scripts/powermenu.sh"
+    },
+    "clock": {
+        "format": "  {:%A - %B %d, %Y - %R}",
+        "tooltip": false,
+    },
+}
