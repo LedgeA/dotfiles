@@ -1,0 +1,18 @@
+[
+  {
+    "label": "",
+    "exec": "hyprlock"
+  },
+  {
+    "label": "",
+    "exec": "systemctl suspend"
+  },
+  {
+    "label": "",
+    "exec": "systemctl reboot"
+  },
+  {
+    "label": "",
+    "exec": "systemctl poweroff"
+  }
+]
