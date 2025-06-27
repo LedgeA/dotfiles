@@ -14,17 +14,17 @@ fi
 # if WALLPAPER variable is empty, nothing will be executed
 [ -z "$WALLPAPER" ] && exit
 
-# reload wallpaper
-swww img --transition-type wipe --transition-angle 30 --transition-step 200 "$WALLPAPER"
-
 # Generate pywal colors
 wal -i "$WALLPAPER"
 
-# retrieve pywal colors
-source ~/.cache/wal/colors.sh
+# reload wallpaper
+swww img --transition-type wipe --transition-angle 30 --transition-step 200 "$WALLPAPER" 
 
 # reload mako
 makoctl reload
+
+# retrieve pywal colors
+source ~/.cache/wal/colors.sh
 
 # hyprlock & hyprland
 OUT="$HOME/.config/hypr/colors.conf"
