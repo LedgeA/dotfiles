@@ -4,11 +4,19 @@ File Structure:
   hypr
     hyprland.conf
     hyprlock.conf
+  kitty
+    kitty.conf
+  nwg-bar
+    bar.json
+    style.css
+  wal
+    templates
+      colors-fuzzel.ini
+      colors-hypr.conf
+      colors-mako
   waybar
     config.jsonc
     style.css
-  kitty
-    kitty.conf
 
 ~/.scripts
   change-wp.sh
