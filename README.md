@@ -1,6 +1,9 @@
 File Structure:
 ```
 ~/.config
+  fuzzel
+    fuzzel.ini
+    launcher-fuzzel.ini
   hypr
     hyprland.conf
     hyprlock.conf
