@@ -1,5 +1,9 @@
 {
 	"layer": "top",
+        "margin-left": 3,
+        "margin-right": 3,
+        "margin-top": 2,
+
 	"modules-left": ["custom/launcher","cpu","memory","disk","tray"],
 	"modules-center": ["clock"],
 	"modules-right": ["network","bluetooth","pulseaudio","battery","custom/power"],
