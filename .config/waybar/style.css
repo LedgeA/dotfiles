@@ -4,7 +4,7 @@
     border: none;
     font-family: "JetbrainsMono Nerd Font";
     font-size: 12px;
-    min-height: 30px;
+    min-height: 32px;
     margin: 0px 3px;
 }
 
@@ -12,8 +12,8 @@ window#waybar {
     /* background: alpha(@background, 0.8); */
     background: @background;
     border: 1px solid @foreground;
-    border-radius: 8px;
-    margin-top: 10px;  
+    border-radius: 6px;
+    margin-top: 10px;
 }
 
 #network,
@@ -29,12 +29,17 @@ window#waybar {
 #network.disconnected,
 #custom-power,
 #custom-launcher,
-#tray,
-#tray menu {
+#tray {
+    background-color: transparent;
     color: @foreground;
     padding: 0px 8px;
-    margin: 0px 0px;
-    
+    margin: 0px;
+}
+
+#tray menu {
+    background-color: alpha(@background, 0.8);
+    color: @foreground;
+    border: 1px solid @foreground;
 }
 
 #custom-power,
