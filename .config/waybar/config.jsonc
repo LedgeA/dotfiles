@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-        "margin-left": 3,
-        "margin-right": 3,
-        "margin-top": 2,
+    "margin-left": 3,
+    "margin-right": 3,
+    "margin-top": 2,
 
 	"modules-left": ["custom/launcher","cpu","memory","disk","tray"],
 	"modules-center": ["clock"],
@@ -21,12 +21,13 @@
 
     "battery": {
         "bat": "BAT0",
-        "interval": 60,
+        "interval": 5,
         "states": {
             "warning": 30,
             "critical": 15
         },
         "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "max-length": 25
     },
@@ -45,7 +46,7 @@
     },
 
     "disk": {
-        "interval": 30,
+        "interval": 60,
         "format": "  {percentage_used}%",
         "path": "/"
     },
@@ -84,7 +85,7 @@
     },
 
     "cpu": {
-        "interval": 15,
+        "interval": 60,
         "format": "  {}%",
         "max-length": 10
     },
@@ -94,6 +95,7 @@
         "format": "  {}%",
         "max-length": 10
     },
+
     "clock": {
         "format": "  {:%A - %B %d, %Y - %R}",
         "tooltip": false,
@@ -109,7 +111,5 @@
         "format": "⏻",
         "tooltip": false,
         "on-click": "nwg-bar"
-    },
-
-
+    }
 }
