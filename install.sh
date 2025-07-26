@@ -15,7 +15,7 @@ mkdir -p ~/builds
 cd ~/builds 
 git clone https://aur.archlinux.org/paru.git
 cd paru
-makepkg -si
+makepkg -si --noconfirm
 
 echo "installing zen-browser and pywal16"
 paru -S zen-browser-bin python-pywal16
