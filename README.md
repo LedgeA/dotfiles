@@ -44,4 +44,4 @@ Make the install.sh executable
 ```chmod +x install.sh```
 
 Run the install script
-``./install.sh``
+```./install.sh```
