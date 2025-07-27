@@ -12,13 +12,6 @@ sudo pacman -S --needed pipewire wireplumber pavucontrol pipewire-pulse pipewire
 sudo systemctl --user enable --now pipewire
 sudo systemctl --user enable --now wireplumber
 
-echo "installing and setting up git and paru"
-mkdir -p ~/builds 
-cd ~/builds 
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si --noconfirm
-
 if ! pacman -Q paru &>/dev/null; then
   echo "paru not found, installing..."
   mkdir -p ~/builds
