@@ -35,7 +35,7 @@ File Structure:
 **HOW TO INSTALL**
 
 Clone the repository
-```https://github.com/LedgeA/dotfiles.git```
+```bash # https://github.com/LedgeA/dotfiles.git```
 
 Move to the repository
 ```cd _path/to/repository_```
