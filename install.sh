@@ -1,14 +1,14 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-sudo pacman -S swww hyprlock waybar mako nwg-bar hyprshot fzf
-sudo pacman -S ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts-cjk
+sudo pacman -S --needed swww hyprlock waybar mako nwg-bar hyprshot fzf
+sudo pacman -S --needed ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts-cjk
 
 echo "setting up bluetooth"
-sudo pacman -S bluez bluez-utils blueman
+sudo pacman -S --needed bluez bluez-utils blueman
 sudo systemctl enable --now bluetooth.service
 
 echo "setting up audio"
-sudo pacman -S pipewire wireplumber pavucontrol pipewire-pulse pipewire-alsa 
+sudo pacman -S --needed pipewire wireplumber pavucontrol pipewire-pulse pipewire-alsa 
 sudo systemctl --user enable --now pipewire
 sudo systemctl --user enable --now wireplumber
 
@@ -19,8 +19,15 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si --noconfirm
 
+if ! pacman -Q paru &>/dev/null; then
+  echo "paru not found, installing..."
+  mkdir -p ~/builds
+  git clone https://aur.archlinux.org/paru.git ~/builds/paru
+  cd ~/builds/paru && makepkg -si --noconfirm
+fi
+
 echo "installing zen-browser and pywal16"
-paru -S zen-browser-bin python-pywal16
+paru -S --needed zen-browser-bin python-pywal16
 
 DIRS=(
   ".config/hypr"
