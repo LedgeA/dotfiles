@@ -30,8 +30,9 @@ DIRS=(
   ".config/nwg-bar"
   ".config/kitty"
   ".config/wal"
-  ".cache/wal" # 
+  ".cache/wal"
   ".scripts"
+  "Pictures/Wallpapers"
 )
 
 echo "copying dotfiles"
