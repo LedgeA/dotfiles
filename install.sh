@@ -1,3 +1,5 @@
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 sudo pacman -S swww hyprlock waybar mako nwg-bar hyprshot fzf
 sudo pacman -S ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts-cjk
 
@@ -19,8 +21,6 @@ makepkg -si --noconfirm
 
 echo "installing zen-browser and pywal16"
 paru -S zen-browser-bin python-pywal16
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 DIRS=(
   ".config/hypr"
