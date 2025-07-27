@@ -27,6 +27,7 @@ File Structure:
 
 ~/.scripts
   change-wp.sh
+
 ~/Pictures
   Wallpapers
 ```
