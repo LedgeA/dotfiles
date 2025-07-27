@@ -33,16 +33,20 @@
 ```
 
 ### How to install
+
+Clone the repository
 ```
-# clone the repository
 https://github.com/LedgeA/dotfiles.git
-
-# move to the repository
+```
+Move to the repository
+```
 cd _path/to/repository_
-
-# make the install.sh executable
+```
+Make the install.sh executable
+```
 chmod +x install.sh
-
-# run the install script
+```
+Run the install script
+```
 ./install.sh
 ```
