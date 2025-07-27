@@ -1,4 +1,4 @@
-File Structure:
+### File Structure
 ```
 ~/.cache
   wal
@@ -32,8 +32,7 @@ File Structure:
   Wallpapers
 ```
 
-**HOW TO INSTALL**
-
+### How to install
 ```
 # clone the repository
 https://github.com/LedgeA/dotfiles.git
