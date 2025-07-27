@@ -42,7 +42,7 @@ Move to the repository
 ```
 cd _path/to/repository_
 ```
-Make the install.sh executable
+Make install.sh executable
 ```
 chmod +x install.sh
 ```
