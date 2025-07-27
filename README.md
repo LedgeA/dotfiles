@@ -1,5 +1,9 @@
 File Structure:
 ```
+~/.cache
+  wal
+    colors-fuzzel.ini
+    colors-mako
 ~/.config
   fuzzel
     fuzzel.ini
@@ -23,4 +27,6 @@ File Structure:
 
 ~/.scripts
   change-wp.sh
+~/Pictures
+  Wallpapers
 ```
