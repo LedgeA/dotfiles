@@ -36,7 +36,7 @@
 
 Clone the repository
 ```
-https://github.com/LedgeA/dotfiles.git
+git clone https://github.com/LedgeA/dotfiles.git
 ```
 Move to the repository
 ```
