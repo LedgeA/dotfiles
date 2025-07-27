@@ -50,3 +50,15 @@ ln -sf ~/.cache/wal/colors-mako ~/.config/mako/config
 echo "## Making .scripts files executable ##"
 chmod +x ~/.scripts/change-wp.sh
 chmod +x ~/.scripts/cliphist-fuzzel-img
+
+echo "## Setting up themes ##"
+mkdir -p "$SCRIPT_DIR"/themes
+
+git clone https://github.com/vinceliuice/Tela-circle-icon-theme
+cd "$SCRIPT_DIR"/themes/Tela-circle-icon-theme
+./install.sh black
+
+git clone https://github.com/vinceliuice/Graphite-gtk-theme 
+cd "$SCRIPT_DIR"/themes/Graphite-gtk-theme
+./install.sh -c dark --tweaks darker rimless
+
