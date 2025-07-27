@@ -42,6 +42,10 @@ window#waybar {
     border: 1px solid @foreground;
 }
 
+#pulseaudio {
+    padding-left: 2px;
+}
+
 #custom-power,
 #custom-launcher {
     padding-right: 11px;
