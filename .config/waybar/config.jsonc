@@ -1,12 +1,12 @@
 {
-	"layer": "top",
+    "layer": "top",
     "margin-left": 3,
     "margin-right": 3,
     "margin-top": 2,
 
-	"modules-left": ["custom/launcher","cpu","memory","disk","tray"],
+	"modules-left": ["custom/launcher", "cpu", "memory", "disk"],
 	"modules-center": ["clock"],
-	"modules-right": ["network","bluetooth","pulseaudio","battery","custom/power"],
+	"modules-right": ["tray", "pulseaudio", "battery", "custom/power"],
 	
     "pulseaudio": {
 	"tooltip": false,
@@ -32,32 +32,16 @@
         "max-length": 25
     },
 
-    "bluetooth": {
-        "format-on": "\udb80\udcb0 {status}",
-        "format-off": "\udb80\udcb2 {status}",
-        "format-connected": "\udb80\udcb1 {device_alias}",
-        "on-click": "bluetoothctl power on",
-        "on-click-right": "bluetoothctl power off"
-    },
-
     "tray": {
-        "icon-size": 18,
-        "spacing": 10
+        "icon-size": 16,
+        "spacing": 6,
+        "reverse-direction": true
     },
 
     "disk": {
         "interval": 60,
         "format": "  {percentage_used}%",
         "path": "/"
-    },
-
-    "network": {
-        "interface": "wlo1", 
-        "format": "{icon}  {essid}",
-        "format-disconnected": "\udb82\udd2b disconnected",
-        "format-disabled": "\udb82\udd2c off",
-        "interval": 5,
-        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"] 
     },
 
     "privacy": {
@@ -111,5 +95,25 @@
         "format": "⏻",
         "tooltip": false,
         "on-click": "nwg-bar"
+    },
+
+    "__commented": {
+
+      "bluetooth": {
+        "format-on": "\udb80\udcb0",
+        "format-off": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1 {device_alias}",
+        "on-click": "bluetoothctl power on",
+        "on-click-right": "bluetoothctl power off"
+      },
+
+      "network": {
+        "interface": "wlan0",
+        "format": "{icon}  {essid}",
+        "format-disconnected": "\udb82\udd2b disconnected",
+        "format-disabled": "\udb82\udd2c off",
+        "interval": 5,
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
+      },
     }
 }
