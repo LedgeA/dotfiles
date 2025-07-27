@@ -6,7 +6,7 @@ window {
 
 button {
   color: @foreground;
-  background-color: @background;
+  background: @background;
   border: 1px solid @foreground;
   border-radius: 8px;
   padding: 36px 44px;
@@ -15,7 +15,7 @@ button {
 
 button:hover {
   color: @background;
-  background-color: @foreground;
+  background: @foreground;
   transition: background-color 150ms ease-in-out;
 }
 
