@@ -43,7 +43,7 @@ DIRS=(
 
 echo "copying dotfiles"
 for dir in "${DIRS[@]}"; do
-  cp -r "$SCRIPT_DIR/$dir" "$HOME/.config/"
+  cp -r "$SCRIPT_DIR/$dir" "$HOME/"
 done
 
 echo "symlinking fuzzel and mako configs"
