@@ -34,14 +34,16 @@ File Structure:
 
 **HOW TO INSTALL**
 
-Clone the repository
-```bash # https://github.com/LedgeA/dotfiles.git```
+```
+# clone the repository
+https://github.com/LedgeA/dotfiles.git
 
-Move to the repository
-```cd _path/to/repository_```
+# move to the repository
+cd _path/to/repository_
 
-Make the install.sh executable
-```chmod +x install.sh```
+# make the install.sh executable
+chmod +x install.sh
 
-Run the install script
-```./install.sh```
+# run the install script
+./install.sh
+```
