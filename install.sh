@@ -1,7 +1,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "## Installing programs ##"
-sudo pacman -S --needed hyprland kitty fuzzel swww hyprlock waybar mako nwg-bar hyprshot fzf network-manager-applet leafpad nautilus
+sudo pacman -S --needed hyprland kitty fuzzel swww hyprlock waybar mako nwg-bar hyprshot fzf network-manager-applet leafpad nautilus xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
 
 echo "## Installing fonts ##"
 sudo pacman -S --needed ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts-cjk
