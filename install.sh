@@ -43,13 +43,16 @@ for dir in "${DIRS[@]}"; do
   cp -r "$SCRIPT_DIR/$dir" "$HOME/$dir"
 done
 
-echo "## Symlinking fuzzel and mako configs ##"
-ln -sf ~/.cache/wal/colors-fuzzel.ini ~/.config/fuzzel/fuzzel.ini
-ln -sf ~/.cache/wal/colors-mako ~/.config/mako/config
-
 echo "## Making .scripts files executable ##"
 chmod +x ~/.scripts/change-wp.sh
 chmod +x ~/.scripts/cliphist-fuzzel-img
+
+echo "## Setting up random theme ##"
+~/.scripts/change-wp.sh
+
+echo "## Symlinking fuzzel and mako configs ##"
+ln -sf ~/.cache/wal/colors-fuzzel.ini ~/.config/fuzzel/fuzzel.ini
+ln -sf ~/.cache/wal/colors-mako ~/.config/mako/config
 
 echo "## Setting up themes ##"
 mkdir -p "$SCRIPT_DIR"/themes
