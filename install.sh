@@ -26,21 +26,15 @@ echo "## Installing zen-browser and pywal16 ##"
 paru -S --needed zen-browser-bin python-pywal16
 
 DIRS=(
-  ".config/hypr"
-  ".config/fuzzel"
-  ".config/mako"
-  ".config/waybar"
-  ".config/nwg-bar"
-  ".config/kitty"
-  ".config/wal"
-  ".cache/wal"
+  ".config"
+  ".cache"
   ".scripts"
-  "Pictures/Wallpapers"
+  "Pictures"
 )
 
 echo "## Copying dotfiles ##"
 for dir in "${DIRS[@]}"; do
-  cp -r "$SCRIPT_DIR/$dir" "$HOME/$dir"
+  cp -r "$SCRIPT_DIR/$dir" "$HOME"
 done
 
 echo "## Making .scripts files executable ##"
@@ -57,10 +51,12 @@ ln -sf ~/.cache/wal/colors-mako ~/.config/mako/config
 echo "## Setting up themes ##"
 mkdir -p "$SCRIPT_DIR"/themes
 
+cd "$SCRIPT_DIR"/themes
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 cd "$SCRIPT_DIR"/themes/Tela-circle-icon-theme
 ./install.sh black
 
+cd "$SCRIPT_DIR"/themes
 git clone https://github.com/vinceliuice/Graphite-gtk-theme 
 cd "$SCRIPT_DIR"/themes/Graphite-gtk-theme
 ./install.sh -c dark --tweaks darker rimless
